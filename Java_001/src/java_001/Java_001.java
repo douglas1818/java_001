@@ -1,21 +1,42 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/*Probando Extructuras de Vectores
+Programa donde se desee guardar el sueldo de 5 personas, y consultarlos mas adelnate.
  */
 package java_001;
+import java.util.Scanner;
 
-/**
- *
- * @author Douglas R Corporatio
- */
+
 public class Java_001 {
+private Scanner sc = new Scanner(System.in);
+private int[] sueldo;
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
+
+
+ public void Consulta()
+ {
+     sueldo = new int[5];
+     for (int s = 0; s < 5; s++)
+     {
+         System.out.println("Ingrese Sueldo a guardar: ");
+         sueldo[s] = sc.nextInt();
+     }
+ }
+ 
+ 
+ public void imprimir()
+ {
+     for (int s = 0; s < 5; s++)
+     {
+         System.out.println("  ");
+         System.out.println(" salario guardado: "+sueldo[s]);
+     }
+ 
+ }
+
+    public static void main(String[] args) 
+    {
+        Java_001 jv1 = new Java_001();
+        jv1.Consulta();
+        jv1.imprimir();
     }
     
 }
